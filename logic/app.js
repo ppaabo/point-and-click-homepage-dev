@@ -361,6 +361,21 @@ const app = new Application();
     }
   });
 
+  document.getElementById("fullscreen-btn").addEventListener("click", () => {
+    if (!document.fullscreenElement) {
+      document
+        .getElementById("game-container")
+        .requestFullscreen()
+        .catch((err) => {
+          alert(
+            `Error attempting to enable full-screen mode: ${err.message} (${err.name})`
+          );
+        });
+    } else {
+      document.exitFullscreen();
+    }
+  });
+
   document.addEventListener("fullscreenchange", () => {
     for (let sceneName in app.scenes) {
       resizeGame(app, app.scenes[sceneName]);

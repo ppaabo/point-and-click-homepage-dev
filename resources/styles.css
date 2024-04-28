@@ -52,6 +52,22 @@ td {
   display: block;
 }
 
+#fullscreen-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 500;
+}
+
+#fullscreen-btn img {
+  width: 48px; /* Set the width of the icon */
+  height: 48px; /* Set the height of the icon */
+}
+
 .button {
   background-color: #fff;
   border: 1px solid #d5d9d9;
@@ -95,6 +111,10 @@ td {
     max-width: 100vw;
     padding: 2rem;
   }
+  #fullscreen-btn img {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 #wiki-text {
@@ -121,6 +141,10 @@ td {
 @media (max-width: 599px) {
   #wiki-text {
     font-size: 14px;
+  }
+  #fullscreen-btn img {
+    width: 20px;
+    height: 20px;
   }
 }
 
